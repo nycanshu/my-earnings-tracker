@@ -13,8 +13,9 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     rules: {
-      "@typescript-eslint/no-explicit-any": "off",  // Disable "any" errors
-      "@typescript-eslint/no-unused-vars": "warn",  // Change unused vars to warnings
+      "@typescript-eslint/no-explicit-any": "off", // Disable "any" type errors
+      "@typescript-eslint/no-unused-vars": "warn", // Change unused vars to warnings
+      "react/no-unescaped-entities": "off", // Disable error for single quotes in JSX
     },
   },
 ];
