@@ -3,9 +3,10 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
 import { useRouter } from 'next/navigation';
+import { User } from "@supabase/supabase-js";
 
 export default function Navbar() {
-    const [user, setUser] = useState<any>(null);
+    const [user, setUser] = useState<User | null>(null);
     const [loginsDisabled, setLoginsDisabled] = useState(false);
     const router = useRouter();
 

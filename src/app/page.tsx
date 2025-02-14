@@ -3,10 +3,11 @@
 import { useState, useEffect } from 'react';
 import { supabase } from './lib/supabase';
 import { useRouter } from 'next/navigation';
+import { User } from '@supabase/supabase-js';
 
 export default function Home() {
-    const [user, setUser] = useState<any>(null);
-    const router = useRouter();
+  const [user, setUser] = useState<User | null>(null);
+ 
     const [formData, setFormData] = useState({
         name: '',
         description: '',
@@ -61,6 +62,7 @@ export default function Home() {
         return (
             <div className="flex flex-col items-center justify-center min-h-screen text-center">
                 <h1 className="text-2xl font-semibold text-gray-800">🔒 Please login to add tasks.</h1>
+                <p>Dear stalkers this is my personal project and login is restricted in this. So please don't try to login.</p>
             </div>
         );
     }
