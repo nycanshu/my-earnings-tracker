@@ -1,1 +1,1 @@
-## Next Js Website with Google Auth provier.
+## Next Js Website with Google Auth provider.
