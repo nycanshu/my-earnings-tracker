@@ -76,11 +76,11 @@ export default function Home() {
                         <input name="id" value={formData.id} onChange={handleChange} required className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-700" />
                     </div> */}
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Task Name</label>
+                        <label className="block text-sm font-medium text-gray-700">Task Code</label>
                         <input name="name" value={formData.name} onChange={handleChange} required className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-700" />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Task Description</label>
+                        <label className="block text-sm font-medium text-gray-700">Task Details</label>
                         <textarea name="description" value={formData.description} onChange={handleChange} required className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-700"></textarea>
                     </div>
                     <div>
