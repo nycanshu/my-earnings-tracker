@@ -1,8 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { supabase } from './lib/supabase';
-import { useRouter } from 'next/navigation';
+import { supabase } from './lib/supabase';;
 import { User } from '@supabase/supabase-js';
 
 export default function Home() {
