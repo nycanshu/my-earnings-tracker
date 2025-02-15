@@ -26,11 +26,12 @@ export default function Navbar() {
 
   const handleLogin = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: {
-        redirectTo: "https://my-earnings-tracker.onrender.com/auth/callback",
-      },
-    });
+        provider: "google",
+        options: {
+          redirectTo: `${process.env.NEXTAUTH_URL}/auth/callback`,
+        },
+      });
+      
     if (error) console.error(error);
   };
 
