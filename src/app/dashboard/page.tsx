@@ -11,6 +11,7 @@ interface Task {
     price: number;
     payment_status: 'Claimed' | 'pending';
     submission_date: string;
+    payment_date:string;
     created_at: string; // Add created_at field
 }
 
@@ -99,10 +100,11 @@ export default function Dashboard() {
                             <table className="w-full border-collapse border border-gray-200">
                                 <thead>
                                     <tr className="bg-indigo-600 text-white">
-                                        <th className="p-3 text-left">Task Name</th>
+                                        <th className="p-3 text-left">Task Code</th>
                                         <th className="p-3 text-center">Price</th>
                                         <th className="p-3 text-center">Payment Status</th>
                                         <th className="p-3 text-center">Submission Date</th>
+                                        <th className="p-3 text-center">Payment Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -128,6 +130,7 @@ export default function Dashboard() {
                                             </td>
 
                                             <td className="p-3 text-center">{new Date(task.submission_date).toLocaleDateString()}</td>
+                                            <td className="p-3 text-center">{new Date(task.payment_date).toLocaleDateString()}</td>
                                         </tr>
                                     ))}
                                 </tbody>
