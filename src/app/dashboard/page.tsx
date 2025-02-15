@@ -12,7 +12,6 @@ interface Task {
     payment_status: 'Claimed' | 'pending';
     submission_date: string;
     payment_date:string;
-    created_at: string; // Add created_at field
 }
 
 export default function Dashboard() {
@@ -41,7 +40,7 @@ export default function Dashboard() {
                 console.error('Error fetching tasks:', error);
             } else {
                 // Sort tasks by created_at date
-                const sortedTasks = (data || []).sort((a: Task, b: Task) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+                const sortedTasks = (data || []).sort((a: Task, b: Task) => new Date(b.submission_date).getTime() - new Date(a.submission_date).getTime());
                 setTasks(sortedTasks);
             }
         };
